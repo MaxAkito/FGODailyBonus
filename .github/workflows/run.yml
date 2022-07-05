@@ -5,9 +5,9 @@ name: Python package
 
 on:
   push:
-    branches: [ main ]
+    branches: [ NA ]
   pull_request:
-    branches: [ main ]
+    branches: [ NA ]
   schedule:
     - cron: '30 19 * * *'
 
@@ -25,11 +25,11 @@ jobs:
       run: |
         python3 main.py
       env:
-        userIds: ${{ secrets.GAME_USERIDS }}
-        authKeys: ${{ secrets.GAME_AUTHKEYS }}
-        secretKeys: ${{ secrets.GAME_SECRETKEYS }}
-        verCode: ${{ secrets.GAME_VERCODE }}
-        UserAgent: ${{ secrets.GAME_USERAGENT }}
+        userIds: ${{ secrets.GAME_USERIDS_NA }}
+        authKeys: ${{ secrets.GAME_AUTHKEYS_NA }}
+        secretKeys: ${{ secrets.GAME_SECRETKEYS_NA }}
+        verCode: ${{ secrets.GAME_VERCODE_NA }}
+        UserAgent: ${{ secrets.GAME_USERAGENT_NA }}
         TGBotToken: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TGAdminId: ${{ secrets.TELEGRAM_ADMIN_ID }}
         GithubToken: ${{ secrets.VERY_IMPORTANT_TOKEN }}
