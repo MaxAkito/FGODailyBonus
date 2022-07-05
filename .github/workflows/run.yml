@@ -21,7 +21,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Test
+    - name: JP
+      ref: "main"
       run: |
         python3 main.py
       env:
@@ -29,6 +30,21 @@ jobs:
         authKeys: ${{ secrets.GAME_AUTHKEYS }}
         secretKeys: ${{ secrets.GAME_SECRETKEYS }}
         verCode: ${{ secrets.GAME_VERCODE }}
+        UserAgent: ${{ secrets.GAME_USERAGENT }}
+        TGBotToken: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TGAdminId: ${{ secrets.TELEGRAM_ADMIN_ID }}
+        GithubToken: ${{ secrets.VERY_IMPORTANT_TOKEN }}
+        GithubName: ${{ secrets.VERY_IMPORTANT_NAME }}
+    - uses: actions/checkout@v2
+    - name: NA
+      ref: "NA"
+      run: |
+        python3 main.py
+      env:
+        userIds: ${{ secrets.GAME_USERIDS_NA }}
+        authKeys: ${{ secrets.GAME_AUTHKEYS_NA }}
+        secretKeys: ${{ secrets.GAME_SECRETKEYS_NA }}
+        verCode: ${{ secrets.GAME_VERCODE_NA }}
         UserAgent: ${{ secrets.GAME_USERAGENT }}
         TGBotToken: ${{ secrets.TELEGRAM_BOT_TOKEN }}
         TGAdminId: ${{ secrets.TELEGRAM_ADMIN_ID }}
