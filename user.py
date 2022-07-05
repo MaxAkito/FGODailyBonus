@@ -96,7 +96,7 @@ class user:
         # 登陆天数
         login_days = data['cache']['updated']['userLogin'][0]['seqLoginCount']
         total_days = data['cache']['updated']['userLogin'][0]['totalLoginCount']
-        res = f'*{self.name_}*\n`Daily Login:: Streak of {login_days}  / {total_days} Total Days\n'
+        res = f'*{self.name_}*\nDaily Login: Streak of {login_days}  / {total_days} Total Days\n'
 
         # 角色信息
         res += f'Level: {lv}\nSQ: {stone}\nTickets: {ticket}\n'
@@ -110,7 +110,7 @@ class user:
         # 友情点
         add_fp = data['response'][0]['success']['addFriendPoint']
         total_fp = data['cache']['replaced']['tblUserGame'][0]['friendPoint']
-        res += f'FP: {add_fp} / {total_fp}`\n'
+        res += f'FP: {add_fp} / {total_fp}\n'
 
         # 登陆奖励
         if 'seqLoginBonus' in data['response'][0]['success']:
