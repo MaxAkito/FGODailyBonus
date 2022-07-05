@@ -24,7 +24,7 @@ if UA != 'nullvalue':
 
 
 def main():
-    fgourl.SendMessageToAdmin(f'铛铛铛( \`д´) *{mytime.GetNowTimeHour()}点* 了')
+    fgourl.SendMessageToAdmin(f'Hiyaa!( \`д´) *{mytime.GetNowTimeHour()}点* 了')
     if userNums == authKeyNums and userNums == secretKeyNums:
         fgourl.ReadConf()
         fgourl.gameData()
@@ -45,7 +45,7 @@ def main():
         fgourl.UploadFileToRepo(mytime.GetNowTimeFileName(), res, mytime.GetNowTimeFileName())
         fgourl.SendMessageToAdmin(res)
     else:
-        print('账号密码数量不匹配')
+        print('Account password mismatch')
 
 
 if __name__ == '__main__':
