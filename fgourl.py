@@ -84,7 +84,7 @@ def SendMessageToAdmin(message):
 
 # ===== Github api =====
 def UploadFileToRepo(filename, content, commit='updated'):
-    url = f'https://api.github.com/repos/{github_name_}/FGODailyBonusLog/contents/' + filename
+    url = f'https://api.github.com/repos/{github_name_}/FGODailyBonusLog/contents/' + f'{filename}?ref=NA
     res = requests.get(url=url)
     jobject = json.loads(res.text)
     header = {
