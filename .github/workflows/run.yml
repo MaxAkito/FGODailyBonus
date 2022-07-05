@@ -22,7 +22,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: JP
-      ref: "main"
+      with:
+        ref: "main"
       run: |
         python3 main.py
       env:
@@ -37,7 +38,8 @@ jobs:
         GithubName: ${{ secrets.VERY_IMPORTANT_NAME }}
     - uses: actions/checkout@v2
     - name: NA
-      ref: "NA"
+      with:
+        ref: "main"
       run: |
         python3 main.py
       env:
