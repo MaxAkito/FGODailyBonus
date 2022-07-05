@@ -21,7 +21,7 @@ jobs:
     - name: JP
       with:
         ref: main
-    - run: |
+      run: |
         python3 main.py
       env:
         userIds: ${{ secrets.GAME_USERIDS }}
@@ -37,7 +37,7 @@ jobs:
     - name: NA
       with:
         ref: NA
-    - run: |
+      run: |
         python3 main.py
       env:
         userIds: ${{ secrets.GAME_USERIDS_NA }}
