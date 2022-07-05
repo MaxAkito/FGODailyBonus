@@ -20,7 +20,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: JP
       with:
-        ref: main
+        ref: 'main'
       run: |
         python3 main.py
       env:
@@ -36,7 +36,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: NA
       with:
-        ref: NA
+        ref: 'NA'
       run: |
         python3 main.py
       env:
