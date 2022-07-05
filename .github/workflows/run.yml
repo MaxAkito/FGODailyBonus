@@ -20,8 +20,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: JP
       with:
-        ref: 'main'
-      run: |
+        ref: main
+    - run: |
         python3 main.py
       env:
         userIds: ${{ secrets.GAME_USERIDS }}
@@ -36,8 +36,8 @@ jobs:
     - uses: actions/checkout@v2
     - name: NA
       with:
-        ref: 'NA'
-      run: |
+        ref: NA
+    - run: |
         python3 main.py
       env:
         userIds: ${{ secrets.GAME_USERIDS_NA }}
