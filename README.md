@@ -10,3 +10,5 @@
 | TELEGRAM_BOT_TOKEN   | nullvalue                                                             | Telegram bot token, null if not used    |
 | VERY_IMPORTANT_NAME  | your_github_name                                                      | Github username                           |
 | VERY_IMPORTANT_TOKEN | ghp_uCwPxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx                              | Github access token                    |
+
+Not by me
